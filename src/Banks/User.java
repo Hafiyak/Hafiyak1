@@ -13,6 +13,7 @@ import java.util.Currency;
  */
 public class User {
     public static void main(String[] args) {
+        
 
         long id;
         String name;
