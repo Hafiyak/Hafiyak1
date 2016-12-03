@@ -14,6 +14,15 @@ import java.util.Currency;
 public class User {
     public static void main(String[] args) {
 
+        long id;
+        String name;
+        double balance;
+        int monthsOfEmployment;
+        String companyName;
+        int salary;
+        Bank bank;
+
+
         ChinaBank chinaBank;
         chinaBank = new ChinaBank();
 
