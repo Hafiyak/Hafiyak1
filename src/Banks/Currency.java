@@ -6,7 +6,7 @@ package Banks;
 public enum Currency {
 
         EUR,
-        eur,
+
         USD,
 
 }

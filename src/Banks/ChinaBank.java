@@ -1,22 +1,18 @@
 package Banks;
 
-import java.util.Currency;
-
-import static Banks.Currency.EUR;
+import java.util.*;
 
 /**
- * Created by user on 01.12.2016.
+ * Created by user on 04.12.2016.
  */
-public class ChinaBank  extends  Bank {
+public class ChinaBank extends Bank {
 
-
-    public ChinaBank() {
+    ChinaBank(){
 
     }
 
-    public ChinaBank(long id, String bankCountry, java.util.Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital, Currency currency1) {
+    public ChinaBank(long id, String bankCountry, java.util.Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
-        this.currency = currency1;
     }
 
     public enum Currency {
@@ -29,70 +25,58 @@ public class ChinaBank  extends  Bank {
         this.currency = currency;
     }
 
-
-
-
-
     @Override
-     int getLimitOfWithdrawal() {
-        int limitOfWithdrawal = 0  ;
-        switch (currency){
-            case EUR:
-                limitOfWithdrawal = 150;
-                break;
-            case USD:
-                limitOfWithdrawal = 100;
-                break;
+    int getLimitOfWithdrawal() {
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
         }
-        return  limitOfWithdrawal ;
     }
-
-
 
     @Override
     int getLimitOfFunding() {
-        int getLimitOfFunding = 0;
-        switch (currency){
-            case EUR:
-                getLimitOfFunding = 5000;
-                break;
-            case USD:
-                getLimitOfFunding = 10000;
-                break;
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
         }
-        return getLimitOfFunding;
     }
 
     @Override
     int getMonthlyRate() {
-        int getMonthlyRate = 0 ;
-        switch (currency){
-            case EUR:
-                getMonthlyRate = 0;
-            case USD:
-                getMonthlyRate = 1;
-                break;
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
         }
-        return 0;
     }
 
     @Override
     int getCommission() {
-        int getCommission = 0;
-        switch (currency){
-            case USD:
-                getCommission = 5;
-                break;
-            case EUR:
-                getCommission = 5;
-                break;
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
         }
-        return getCommission;
     }
 
     @Override
     double moneyPaidMonthlyForSalary() {
-
-        return 0;
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
+        }
     }
 }

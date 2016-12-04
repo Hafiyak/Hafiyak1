@@ -6,55 +6,106 @@ import Banks.EUBank;
 import Banks.USBank;
 import com.sun.org.apache.xpath.internal.SourceTree;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.Currency;
 
 /**
  * Created by user on 03.12.2016.
  */
 public class User {
-    public static void main(String[] args) {
-        
-
-        long id;
-        String name;
-        double balance;
-        int monthsOfEmployment;
-        String companyName;
-        int salary;
-        Bank bank;
 
 
-        ChinaBank chinaBank;
-        chinaBank = new ChinaBank();
+    long id;
+    String name;
+    double balance;
+    int monthsOfEmployment;
+    String companyName;
+    int salary;
+    Bank bank;
 
-        System.out.println(chinaBank.getLimitOfWithdrawal());
-        System.out.println(chinaBank.getCommission());
-        System.out.println(chinaBank.getLimitOfFunding());
-        System.out.println(chinaBank.getMonthlyRate());
-        System.out.println(chinaBank.moneyPaidMonthlyForSalary());
-
-
-        System.out.println("..........");
-
-        EUBank euBank = new EUBank();
-
-        System.out.println(euBank.getLimitOfWithdrawal());
-        System.out.println(euBank.moneyPaidMonthlyForSalary());
-        System.out.println(euBank.getMonthlyRate());
-        System.out.println(euBank.getLimitOfFunding());
-        System.out.println(euBank.getCommission());
-
-        System.out.println("........");
-
-        USBank usBank = new USBank();
-
-        System.out.println(usBank.getCommission());
-        System.out.println(usBank.getLimitOfFunding());
-        System.out.println(usBank.getMonthlyRate());
-        System.out.println(usBank.moneyPaidMonthlyForSalary());
-        System.out.println(usBank.getLimitOfWithdrawal());
-
+    public User() {
 
     }
 
+    public User(long id, String name, double balance, int monthsOfEmployment, String companyName, int salary, Bank bank) {
+        this.id = id;
+        this.name = name;
+        this.balance = balance;
+        this.monthsOfEmployment = monthsOfEmployment;
+        this.companyName = companyName;
+        this.salary = salary;
+        this.bank = bank;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                ", monthsOfEmployment=" + monthsOfEmployment +
+                ", companyName='" + companyName + '\'' +
+                ", salary=" + salary +
+                ", bank=" + bank +
+                '}';
+    }
+
+
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public int getMonthsOfEmployment() {
+        return monthsOfEmployment;
+    }
+
+    public void setMonthsOfEmployment(int monthsOfEmployment) {
+        this.monthsOfEmployment = monthsOfEmployment;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public Bank getBank() {
+        return bank;
+    }
+
+    public void setBank(Bank bank) {
+        this.bank = bank;
+    }
 }

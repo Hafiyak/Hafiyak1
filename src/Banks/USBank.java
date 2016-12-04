@@ -30,65 +30,52 @@ public class USBank extends Bank {
 
     @Override
     int getLimitOfWithdrawal() {
-        int getLimitOfWithdrawal = 0 ;
-        switch (currency){
-            case USD:
-                getLimitOfWithdrawal = 1000;
-                break;
-            case EUR:
-                getLimitOfWithdrawal = 1200;
-                break;
-
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
         }
-        return getLimitOfWithdrawal ;
     }
 
-    @Override
     int getLimitOfFunding() {
-        int getLimitOfFunding = 0 ;
-        switch (currency){
-            case EUR:
-                getLimitOfFunding = 10000;
-                break;
-            case USD:
-                getLimitOfFunding = 0;
-                break;
-
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
         }
-        return getLimitOfFunding ;
     }
 
-    @Override
     int getMonthlyRate() {
-        int getMonthlyRate = 0;
-        switch (currency){
-            case USD:
-                getMonthlyRate = 1;
-                break;
-            case EUR:
-                getMonthlyRate = 2;
-                break;
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
         }
-        return getMonthlyRate ;
     }
 
-    @Override
     int getCommission() {
-        int getCommission = 0 ;
-        switch (currency){
-            case USD:
-                getCommission = 5;
-                break;
-            case EUR:
-                getCommission = 7;
-
-
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
         }
-        return getCommission ;
     }
 
-    @Override
     double moneyPaidMonthlyForSalary() {
-        return 0;
+        if (this.currency == Currency.EUR) {
+            return 1000;
+        } else if (this.currency == Currency.USD) {
+            return 5000;
+        } else {
+            return -1;
+        }
     }
 }

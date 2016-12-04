@@ -36,7 +36,7 @@ public class  BankSystemImpl implements  BankSystem {
     @Override
     public void paySalary(User user) {
         int paySalary = 0;
-        
+
     }
 }
 

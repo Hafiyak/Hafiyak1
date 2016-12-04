@@ -8,6 +8,7 @@ import java.util.Currency;
 public abstract  class   Bank {
 
 
+
     long id;
     String bankCountry ;
     Currency currency;
