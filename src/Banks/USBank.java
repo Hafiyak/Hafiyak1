@@ -7,24 +7,10 @@ import java.util.*;
  */
 public class USBank extends Bank {
 
-    public USBank() {
 
-    }
-
-    public USBank(long id, String bankCountry, java.util.Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital, Currency currency1) {
+    public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
-        this.currency = currency1;
     }
-
-    public enum Currency {
-        EUR,USD
-    }
-    Currency currency ;
-
-    public USBank(Currency currency) {
-        this.currency = currency;
-    }
-
 
 
 

@@ -8,23 +8,8 @@ import java.util.*;
 public class  EUBank extends Bank {
 
 
-    public EUBank() {
-
-    }
-
-    public EUBank(long id, String bankCountry, java.util.Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital, Currency currency1) {
+    public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
-        this.currency = currency1;
-    }
-
-    public enum Currency {
-        EUR, USD
-    }
-
-    Currency currency;
-
-    public EUBank(Currency currency) {
-        this.currency = currency;
     }
 
     @Override

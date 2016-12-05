@@ -15,6 +15,7 @@ import java.util.Currency;
 public class User {
 
 
+
     long id;
     String name;
     double balance;

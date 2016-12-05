@@ -1,13 +1,6 @@
 package Banks;
 
-import java.util.Currency;
-
-/**
- * Created by user on 01.12.2016.
- */
-public abstract  class   Bank {
-
-
+public abstract   class   Bank {
 
     long id;
     String bankCountry ;
