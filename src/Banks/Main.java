@@ -7,37 +7,40 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ChinaBank();
-        ChinaBank1();
-        EUBank();
-        EUBank1();
-        USBank();
-        USBank1();
+        User1();
+        User2();
+        User3();
+        User4();
+        User5();
+        User6();
 
 
     }
 
-    static void ChinaBank(){
+
+
+    static void User1(){
+
 
     }
 
-    static void ChinaBank1(){
+    static void User2(){
 
     }
 
-    static void EUBank(){
+    static void User3(){
 
     }
 
-    static void EUBank1(){
+    static void User4(){
 
     }
 
-    static void USBank(){
+    static void User5(){
 
     }
 
-    static void USBank1(){
+    static void User6(){
 
 
     }

@@ -11,32 +11,24 @@ public class  BankSystemImpl implements  BankSystem {
 
     @Override
     public void withdrawOfUser(User user, int amount) {
-        amount = 100;
-        if (amount == b)
-            System.out.println("Good");
+         amount = 100;
     }
+
 
     @Override
     public void fundUser(User user, int amount) {
-        amount = 100;
-        if (amount == b)
-            System.out.println("Good");
-
+        amount = 150;
     }
 
     @Override
     public void transferMoney(User fromUser, User toUser, int amount) {
-        int transferMoney = 0;
         amount = 100;
-        if (amount == b)
-            System.out.println("Good");
-
 
     }
 
     @Override
     public void paySalary(User user) {
-        int paySalary = 0;
+        int paySalary = 200;
 
     }
 }
