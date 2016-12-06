@@ -1,11 +1,13 @@
 package Banks;
 
-import java.util.*;
-
 /**
  * Created by user on 01.12.2016.
  */
 public class  EUBank extends Bank {
+
+    EUBank(){
+
+    }
 
 
     public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {

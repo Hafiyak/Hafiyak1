@@ -11,6 +11,10 @@ public class ChinaBank extends Bank {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
+    public ChinaBank() {
+
+    }
+
 
 
     @Override

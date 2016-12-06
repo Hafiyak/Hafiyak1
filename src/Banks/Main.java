@@ -18,30 +18,23 @@ public class Main {
     }
 
 
-
-    static void User1(){
-
+    static  void  User1() {
+         ChinaBank chinaBank = new ChinaBank();
 
     }
-
     static void User2(){
-
+        ChinaBank chinaBank =  new ChinaBank();
     }
-
     static void User3(){
-
+        USBank usBank = new USBank();
     }
-
     static void User4(){
-
+        USBank usBank = new USBank();
     }
-
     static void User5(){
-
+        EUBank euBank = new EUBank();
     }
-
     static void User6(){
-
-
+        EUBank euBank = new EUBank();
     }
 }
