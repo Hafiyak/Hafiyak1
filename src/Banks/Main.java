@@ -5,36 +5,20 @@ package Banks;
  */
 public class Main {
 
+
+
+
     public static void main(String[] args) {
 
-        User1();
-        User2();
-        User3();
-        User4();
-        User5();
-        User6();
+        ChinaBank chinaBank = new ChinaBank(12,"China",Currency.USD,100,700,55,10000);
 
 
+
+        User user1 = new User(10,"Alex",100.00,10,"Ubisoft",100, chinaBank);
+
+            System.out.println(user1);
+
     }
 
 
-    static  void  User1() {
-         ChinaBank chinaBank = new ChinaBank();
-
-    }
-    static void User2(){
-        ChinaBank chinaBank =  new ChinaBank();
-    }
-    static void User3(){
-        USBank usBank = new USBank();
-    }
-    static void User4(){
-        USBank usBank = new USBank();
-    }
-    static void User5(){
-        EUBank euBank = new EUBank();
-    }
-    static void User6(){
-        EUBank euBank = new EUBank();
-    }
 }

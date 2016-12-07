@@ -11,9 +11,7 @@ public class ChinaBank extends Bank {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
-    public ChinaBank() {
 
-    }
 
 
 
@@ -53,9 +51,9 @@ public class ChinaBank extends Bank {
     @Override
     int getCommission() {
         if (this.currency == Currency.EUR) {
-            return 1000;
+            return 1;
         } else if (this.currency == Currency.USD) {
-            return 5000;
+            return 2;
         } else {
             return -1;
         }

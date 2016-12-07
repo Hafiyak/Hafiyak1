@@ -7,9 +7,7 @@ import java.util.*;
  */
 public class USBank extends Bank {
 
-    USBank(){
 
-    }
 
 
     public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {

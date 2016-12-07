@@ -1,20 +1,6 @@
 package Banks;
 
-import Banks.Bank;
-import Banks.ChinaBank;
-import Banks.EUBank;
-import Banks.USBank;
-import com.sun.org.apache.xpath.internal.SourceTree;
-
-import javax.jws.soap.SOAPBinding;
-import java.util.Currency;
-
-/**
- * Created by user on 03.12.2016.
- */
 public class User {
-
-
 
     long id;
     String name;
@@ -24,9 +10,7 @@ public class User {
     int salary;
     Bank bank;
 
-    public User() {
 
-    }
 
     public User(long id, String name, double balance, int monthsOfEmployment, String companyName, int salary, Bank bank) {
         this.id = id;

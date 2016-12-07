@@ -6,14 +6,21 @@ package Banks;
 public class  BankSystemImpl implements  BankSystem {
 
 
+
     int b = 100;
 
 
     @Override
-    public void withdrawOfUser(User user, int amount) {
-         amount = 100;
+    public void withdrawOfUser(User user, int amount ) {
+        amount = 100;
+
     }
 
+
+
+    public void setB(int b) {
+        this.b = b;
+    }
 
     @Override
     public void fundUser(User user, int amount) {

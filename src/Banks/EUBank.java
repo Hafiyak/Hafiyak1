@@ -5,10 +5,6 @@ package Banks;
  */
 public class  EUBank extends Bank {
 
-    EUBank(){
-
-    }
-
 
     public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
