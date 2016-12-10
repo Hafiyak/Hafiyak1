@@ -11,7 +11,7 @@ public abstract   class   Bank {
     long totalCapital;
 
 
-    
+
 
     abstract int getLimitOfWithdrawal();
     abstract int getLimitOfFunding();

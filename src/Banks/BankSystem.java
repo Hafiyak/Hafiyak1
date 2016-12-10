@@ -11,4 +11,5 @@ public interface  BankSystem {
     abstract void paySalary(User user);
 
 
+
 }

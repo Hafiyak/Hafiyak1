@@ -31,7 +31,7 @@ public class ChinaBank extends Bank {
         if (this.currency == Currency.EUR) {
             return 1000;
         } else if (this.currency == Currency.USD) {
-            return 5000;
+            return 0 ;
         } else {
             return -1;
         }
@@ -69,4 +69,6 @@ public class ChinaBank extends Bank {
             return -1;
         }
     }
+
+
 }
