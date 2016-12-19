@@ -9,7 +9,4 @@ public interface  BankSystem {
     abstract void fundUser(User user, int amount);
     abstract void transferMoney(User fromUser, User toUser, int amount);
     abstract void paySalary(User user);
-
-
-
 }

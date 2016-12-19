@@ -8,10 +8,9 @@ public class  BankSystemImpl implements  BankSystem {
 
 
 
-    @Override
-    public void withdrawOfUser(User user, int amount ) {
-        amount = 50;
-        int commission = user.getBank().getCommission();
+
+    public void withdrawOfUser(User user ,int amount){
+        int commission = user.getBank().getCommission(amount);
         double balance = user.getBalance();
         int limit  = user.getBank().getLimitOfWithdrawal();
 
@@ -41,13 +40,14 @@ public class  BankSystemImpl implements  BankSystem {
 
     @Override
     public void transferMoney(User fromUser, User toUser, int amount) {
-        amount = 100;
         double balance = fromUser.balance;
         double balance1= toUser.balance;
+        int limitOfFunding = toUser.getBank().getLimitOfFunding();
         int limitofwithdrawal = fromUser.getBank().getLimitOfWithdrawal();
-        int limitofaund = toUser.bank.getLimitOfFunding();
 
-        if(amount <=limitofwithdrawal && amount <= limitofaund){
+        if(amount <= balance && amount <= limitofwithdrawal && amount <= limitOfFunding ){
+            fromUser.setBalance(balance - amount);
+            toUser.setBalance(balance1 + amount);
 
         }
 
@@ -55,17 +55,8 @@ public class  BankSystemImpl implements  BankSystem {
     }
 
     @Override
-    public void paySalary(User user) {
-        double Balance = user.getBalance();
-        int limitOfFunding = user.getBank().getLimitOfFunding();
-        int Salary  = user.getSalary();
-
-        if (Salary <= limitOfFunding) {
-            double total = Balance + Salary   ;
-            user.setBalance(total);
-        }
-
-
+    public void paySalary(User user){
+        user.setBalance(user.getBalance() + user.getSalary());
     }
 }
 

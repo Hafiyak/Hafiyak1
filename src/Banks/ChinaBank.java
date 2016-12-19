@@ -1,7 +1,5 @@
 package Banks;
 
-import java.util.*;
-
 /**
  * Created by user on 04.12.2016.
  */
@@ -11,16 +9,17 @@ public class ChinaBank extends Bank {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
-
-
-
+    @Override
+    double moneyPaidMonthlyForSalary() {
+        return 0;
+    }
 
     @Override
     int getLimitOfWithdrawal() {
         if (this.getCurrency() == Currency.EUR) {
-            return 1000;
+            return 150;
         } else if (this.getCurrency() == Currency.USD) {
-            return 5000;
+            return 100;
         } else {
             return -1;
         }
@@ -28,10 +27,10 @@ public class ChinaBank extends Bank {
 
     @Override
     int getLimitOfFunding() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 0 ;
+        if (this.getCurrency() == Currency.EUR) {
+            return 5000;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 10000;
         } else {
             return -1;
         }
@@ -39,36 +38,31 @@ public class ChinaBank extends Bank {
 
     @Override
     int getMonthlyRate() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
-        } else {
-            return -1;
-        }
-    }
-
-    @Override
-    int getCommission() {
-        if (this.currency == Currency.EUR) {
+        if (this.getCurrency() == Currency.EUR) {
             return 1;
-        } else if (this.currency == Currency.USD) {
-            return 2;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 0;
         } else {
             return -1;
         }
     }
 
+
     @Override
-    double moneyPaidMonthlyForSalary() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
-        } else {
-            return -1;
+        int getCommission (int summ) {
+            if (this.getCurrency() == Currency.EUR) {
+                if (summ <= 1000) {
+                    return 10;
+
+                } else if (this.getCurrency() == Currency.USD) {
+                    return 3;
+                } else {
+                    return -1;
+                }
+            }
+            return 0;
         }
-    }
 
 
 }
+

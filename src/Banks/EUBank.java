@@ -12,54 +12,48 @@ public class  EUBank extends Bank {
 
     @Override
     int getLimitOfWithdrawal() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
+        if (this.getCurrency() == Currency.EUR) {
+            return 2200;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 2000;
         } else {
             return -1;
         }
     }
 
     int getLimitOfFunding() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
+        if (this.getCurrency() == Currency.EUR) {
+            return 20000;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 10000;
         } else {
             return -1;
         }
     }
 
     int getMonthlyRate() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
+        if (this.getCurrency() == Currency.EUR) {
+            return 1;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 0;
         } else {
             return -1;
         }
     }
 
-    int getCommission() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
+    int getCommission(int summ) {
+        if (this.getCurrency() == Currency.EUR) {
+            return 2/100;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 5/100;
         } else {
             return -1;
         }
     }
 
+
+    @Override
     double moneyPaidMonthlyForSalary() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
-        } else {
-            return -1;
-        }
-
-
+        return 0;
     }
 }

@@ -19,49 +19,49 @@ public class USBank extends Bank {
 
     @Override
     int getLimitOfWithdrawal() {
-        if (this.currency == Currency.EUR) {
+        if (this.getCurrency() == Currency.EUR) {
+            return 1200;
+        } else if (this.getCurrency() == Currency.USD) {
             return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
         } else {
             return -1;
         }
     }
-
+    @Override
     int getLimitOfFunding() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
+        if (this.getCurrency() == Currency.EUR) {
+            return 10000;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 0;
         } else {
             return -1;
         }
     }
-
+    @Override
     int getMonthlyRate() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
+        if (this.getCurrency() == Currency.EUR) {
+            return 1/100;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 2/100;
         } else {
             return -1;
         }
     }
-
-    int getCommission() {
-        if (this.currency == Currency.EUR) {
-            return 1000;
-        } else if (this.currency == Currency.USD) {
-            return 5000;
+    @Override
+    int getCommission(int summ) {
+        if (this.getCurrency() == Currency.EUR) {
+            return 6/100;
+        } else if ( this.getCurrency() == Currency.USD ) {
+            return 5/100 ;
         } else {
             return -1;
         }
     }
-
+    @Override
     double moneyPaidMonthlyForSalary() {
-        if (this.currency == Currency.EUR) {
+        if (this.getCurrency() == Currency.EUR) {
             return 1000;
-        } else if (this.currency == Currency.USD) {
+        } else if (this.getCurrency() == Currency.USD) {
             return 5000;
         } else {
             return -1;

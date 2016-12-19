@@ -2,25 +2,29 @@ package Banks;
 
 public abstract   class   Bank {
 
-    long id;
-    String bankCountry ;
-    Currency currency;
-    int numberOfEmployees;
-    double avrSalaryOfEmployee;
-    long rating;
-    long totalCapital;
+    private long id;
+    private String bankCountry ;
+    private Currency currency;
+    private int numberOfEmployees;
+    private double avrSalaryOfEmployee;
+    private long rating;
+    private long totalCapital;
 
 
 
 
     abstract int getLimitOfWithdrawal();
+
     abstract int getLimitOfFunding();
+
     abstract int getMonthlyRate();
-    abstract  int getCommission();
+
+    abstract  int getCommission(int summ);
+
     abstract double moneyPaidMonthlyForSalary();
 
-    Bank(){
-    }
+
+
     public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         this.id = id;
         this.bankCountry = bankCountry;
