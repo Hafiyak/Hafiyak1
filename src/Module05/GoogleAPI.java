@@ -4,6 +4,7 @@ package Module05;
  * Created by user on 15.01.2017.
  */
 public class GoogleAPI extends APIAbstract {
+
     public GoogleAPI() {
         Room[] roomsSet = new Room[5];
         roomsSet[0] = new Room(3291874345L, 300, 1, 2016, 12, 20, "Hilton", "Kyiv");

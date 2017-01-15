@@ -5,6 +5,7 @@ package Module05;
  */
 public interface API {
 
+
     public Room[] getRooms();
     Room[] findRooms(int price, int persons, String city, String hotel);
 

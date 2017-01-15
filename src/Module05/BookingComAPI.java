@@ -4,6 +4,7 @@ package Module05;
  * Created by user on 15.01.2017.
  */
 public class BookingComAPI extends APIAbstract {
+
     public BookingComAPI() {
         Room[] roomsSet = new Room[5];
         roomsSet[0] = new Room(4567483745L, 150, 2, 2016, 12, 15, "Hilton", "Kyiv");
